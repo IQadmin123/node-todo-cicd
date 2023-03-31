@@ -5,13 +5,13 @@ const express = require('express'),
     // Mitigate XSS using sanitizer
     sanitizer = require('sanitizer'),
     app = express(),
-    port = 8001
-    IP = require('35.155.168.204');
+    port = 8000
+    //IP = require('35.155.168.204');
 
-app.get('/', (req, res) => {
-    const ipAddress = IP.address();
-    res.send(ipAddress)
-})
+//app.get('/', (req, res) => {
+   // const ipAddress = IP.address();
+    //res.send(ipAddress)
+//})
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -88,7 +88,7 @@ app.get('/todo', function (req, res) {
 
     .listen(port, function () {
         // Logging to console
-        console.log(`Todolist running on http://35.155.168.204:${port}`)
+        console.log(`Todolist running on http://0.0.0.0:${port}`)
     });
 // Export app
 module.exports = app;
