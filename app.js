@@ -6,6 +6,11 @@ const express = require('express'),
     sanitizer = require('sanitizer'),
     app = express(),
     port = 8000
+const requestIP = require('35.155.168.204');
+app.get('/', (req, res) => {
+    const ipAddress = requestIP.getClientIp(req);
+    res.send(ipAddress)
+})
 
 app.use(bodyParser.urlencoded({
     extended: false
