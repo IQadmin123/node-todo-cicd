@@ -6,9 +6,10 @@ const express = require('express'),
     sanitizer = require('sanitizer'),
     app = express(),
     port = 8000
-const requestIP = require('35.155.168.204');
+    IP = require('35.155.168.204');
+
 app.get('/', (req, res) => {
-    const ipAddress = requestIP.getClientIp(req);
+    const ipAddress = IP.address();
     res.send(ipAddress)
 })
 
@@ -87,7 +88,7 @@ app.get('/todo', function (req, res) {
 
     .listen(port, function () {
         // Logging to console
-        console.log(`Todolist running on http://35.155.168.204:${port}`)
+        console.log(`Todolist running on http://0.0.0.0:${port}`)
     });
 // Export app
 module.exports = app;
