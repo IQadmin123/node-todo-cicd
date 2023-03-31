@@ -5,7 +5,7 @@ const express = require('express'),
     // Mitigate XSS using sanitizer
     sanitizer = require('sanitizer'),
     app = express(),
-    port = 8000
+    port = 80
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -82,7 +82,7 @@ app.get('/todo', function (req, res) {
 
     .listen(port, function () {
         // Logging to console
-        console.log(`Todolist running on http://0.0.0.0:${port}`)
+        console.log(`Todolist running on http://35.155.168.204:${port}`)
     });
 // Export app
 module.exports = app;
