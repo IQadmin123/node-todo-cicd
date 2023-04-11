@@ -5,7 +5,7 @@ const express = require('express'),
     // Mitigate XSS using sanitizer
     sanitizer = require('sanitizer'),
     app = express(),
-    port = 8000
+    port = 8001
     //IP = require('35.155.168.204');
 
 //app.get('/', (req, res) => {
